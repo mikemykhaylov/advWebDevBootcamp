@@ -1,0 +1,30 @@
+body {
+  background-color: #fcd04b;
+  color: white;
+  font-family: "Lato";
+  text-align: center;
+}
+.button {
+  background-color: #fcad26;
+  border: none;
+  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 0px 0px #efa424;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  padding: 25px 80px;
+  position: relative;
+  text-transform: uppercase;
+}
+.button:hover {
+  box-shadow: 0px 5px 0px 0px #efa424;
+  top: 5px;
+}
+.button:active {
+  box-shadow: none;
+  top: 10px;
+}
