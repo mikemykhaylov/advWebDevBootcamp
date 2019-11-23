@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:300,500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #555555;
+  font: normal 16px;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  color: white;
+  opacity: 0.75;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 1;
+}
+ul {
+  list-style: none;
+}
+h1,
+h2 {
+  font-family: "Quicksand", sans-serif;
+}
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 80px;
+}
+.paragraph {
+  line-height: 2;
+  margin-bottom: 30px;
+  max-width: 775px;
+  padding: 0 20px;
+  text-align: center;
+}
+.button {
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: large;
+  opacity: 1;
+  padding: 20px 46px;
+  text-align: center;
+}
+.title {
+  font: bold 32px "Open Sans", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.hr {
+  background-color: #3f51b5;
+  border: 0;
+  height: 3px;
+  margin-bottom: 50px;
+  width: 250px;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeSlide {
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.header {
+  align-items: center;
+  animation: fadein 1s 0.5s forwards;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  opacity: 0;
+  padding: 35px 100px;
+  position: absolute;
+  width: 100%;
+}
+.logo {
+  font-weight: 300;
+}
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.nav__link {
+  list-style: none;
+}
+.hero {
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+}
+.hero__background {
+  background: url("../img/main.jpg") #80a3db;
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+.hero__content {
+  animation: fadeSlide 1s 1s forwards;
+  margin-top: 100px;
+  opacity: 0;
+  text-align: center;
+}
+.hero__title {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+.hero__subtitle {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.destinations__image {
+  background-clip: content-box;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  height: 350px;
+  padding: 20px;
+}
+.destinations__image--small {
+  flex-basis: 30%;
+}
+.destinations__image--large {
+  flex-basis: 70%;
+}
+.package {
+  flex-basis: 50%;
+  padding: 50px;
+  text-align: center;
+}
+.package__icon {
+  color: #8c9eff;
+}
+.quote {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 40px;
+}
+.contact__form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+}
+.form__button {
+  padding: 18px 42px;
+  text-transform: uppercase;
+}
+.form__input {
+  color: #555555;
+  flex: 1;
+  font-size: 18px;
+  margin-right: 30px;
+  padding: 15px;
+}
+.footer {
+  align-items: center;
+  background-color: #607d8b;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.footer__paragraph {
+  align-self: center;
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.6;
+  text-transform: uppercase;
+  padding: 0;
+}
+.footer__socials {
+  display: flex;
+}
+.footer__social {
+  margin-left: 16px;
+}
+@media (max-width: 1200px) {
+  .destinations__image--large,
+  .destinations__image--small {
+    flex-basis: 50%;
+  }
+  .contact__form {
+    flex-direction: column;
+  }
+  .form__input {
+    margin: 15px 0;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 50px 20px;
+  }
+  .header {
+    flex-direction: column;
+    padding: 20px 50px;
+  }
+  .logo {
+    margin-bottom: 15px;
+  }
+  .nav {
+    width: 60%;
+  }
+  .hero {
+    min-height: 600px;
+  }
+  .hero__title {
+    font-size: 48px;
+  }
+  .hero__subtitle {
+    font-size: 24px;
+  }
+  .button {
+    padding: 15px 40px;
+  }
+  .destinations__image--large,
+  .destinations__image--small {
+    flex-basis: 100%;
+  }
+  .package {
+    flex-basis: 100%;
+  }
+  .footer {
+    flex-direction: column;
+  }
+}
