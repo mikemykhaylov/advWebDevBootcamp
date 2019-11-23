@@ -1,0 +1,42 @@
+html {
+  background: #ecf0f1;
+}
+body,
+h1,
+h2 {
+  color: #2c3e50;
+  font-family: Helvetica, Sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 80px;
+}
+h2 {
+  animation: appear 1s 3s forwards;
+  font-size: 36px;
+  opacity: 0;
+}
+.container {
+  margin: 4em;
+  text-align: center;
+}
+.loader {
+  animation: spin 2s linear 0s infinite normal none;
+  border: 16px solid gray;
+  border-bottom-color: lightskyblue;
+  border-radius: 50%;
+  border-top-color: mediumaquamarine;
+  height: 120px;
+  margin: auto;
+  width: 120px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
