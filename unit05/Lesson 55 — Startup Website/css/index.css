@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:300,500&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:300,500&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +7,7 @@
 body {
   color: #555555;
   font: normal 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 a {
   color: white;
@@ -22,7 +22,7 @@ ul {
 }
 h1,
 h2 {
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 section {
   align-items: center;
@@ -48,7 +48,7 @@ section {
   text-align: center;
 }
 .title {
-  font: bold 32px "Open Sans", sans-serif;
+  font: bold 32px 'Open Sans', sans-serif;
   margin-bottom: 30px;
   text-align: center;
   text-transform: capitalize;
@@ -111,7 +111,7 @@ section {
   width: 100vw;
 }
 .hero__background {
-  background: url("../img/main.jpg") #80a3db;
+  background: url('../img/main.jpg') #80a3db;
   background-size: cover;
   height: 100vh;
   position: absolute;
@@ -192,8 +192,8 @@ section {
   font-size: 14px;
   margin: 0;
   opacity: 0.6;
-  text-transform: uppercase;
   padding: 0;
+  text-transform: uppercase;
 }
 .footer__socials {
   display: flex;

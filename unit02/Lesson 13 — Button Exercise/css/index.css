@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
 body {
   background-color: #fcd04b;
   color: white;
-  font-family: "Lato";
+  font-family: 'Lato';
   text-align: center;
 }
 .button {

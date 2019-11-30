@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:200");
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
 h1 {
   color: #34495e;
-  font-family: Raleway;
+  font-family: Lato;
   text-align: center;
 }
 .container {
