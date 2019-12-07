@@ -3,8 +3,8 @@ module.exports = {
     browser: true,
     commonjs: true,
     es6: true,
-    node: true,
     jquery: true,
+    node: true,
   },
   extends: ['airbnb-base'],
   globals: {
@@ -15,9 +15,10 @@ module.exports = {
     ecmaVersion: 2018,
   },
   rules: {
-    'no-unused-vars': 0,
-    'no-console': 0,
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'no-console': 0,
     'no-param-reassign': ['error', { props: false }],
+    'no-unused-vars': 0,
+    'no-undef': 1,
   },
 };
