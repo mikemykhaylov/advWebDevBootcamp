@@ -18,5 +18,6 @@ module.exports = {
     'no-unused-vars': 0,
     'no-console': 0,
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'no-param-reassign': ['error', { props: false }],
   },
 };
