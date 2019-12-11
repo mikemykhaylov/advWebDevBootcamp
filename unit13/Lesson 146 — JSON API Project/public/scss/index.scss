@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+// General Styles
+
+$textcolor: #34495e;
+$secondcolor: #b3bdc7;
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ecf0f1;
+}
+// Header Styles
+
+header {
+  text-align: center;
+  h1 {
+    font-size: 64px;
+    font-weight: 300;
+    margin: 80px 0 25px;
+    span {
+      font-weight: 700;
+    }
+  }
+  h2 {
+    color: $secondcolor;
+    font-weight: 300;
+  }
+}
+// Form Styles
+
+.form {
+  margin: 50px auto 20px;
+  width: 800px;
+}
+#todoInput {
+  background: none;
+  border: none;
+  border-bottom: 1px solid $textcolor;
+  color: $textcolor;
+  font-size: 28px;
+  font-weight: 300;
+  height: 60px;
+  outline: none;
+  padding: 20px;
+  width: 100%;
+}
+// List Styles
+
+.list {
+  margin: 0 auto;
+  width: 800px;
+}
+.task {
+  color: $textcolor;
+  font-size: 20px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+  &:hover {
+    background: #00000005;
+    cursor: pointer;
+    span {
+      opacity: 1;
+    }
+  }
+}
+.done {
+  color: $secondcolor;
+  text-decoration: line-through;
+}
+li span {
+  color: #c0392b;
+  float: right;
+  opacity: 0;
+  transition: all 0.3s;
+  &:hover {
+    color: #e74c3c;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "jsonapiapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node_modules/.bin/sass public/scss/index.scss public/css/index.css && ./node_modules/.bin/webpack",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "ky": "^0.16.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.7.14"
+  },
+  "devDependencies": {
+    "sass": "^1.23.7",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
