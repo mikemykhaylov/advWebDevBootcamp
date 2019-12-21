@@ -2,8 +2,11 @@ const o = {
   name: 'Colt',
 };
 const o2 = o;
+const o3 = {};
+Object.assign(o3, o);
 o2.name = 'Elie';
 console.log(o.name);
+console.log(o3.name);
 
 const firstMap = new Map([
   [1, 2],
