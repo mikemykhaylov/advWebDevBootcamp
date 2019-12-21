@@ -23,7 +23,7 @@ d3.select('form').on('submit', () => {
   d3.event.preventDefault();
   const currentText = d3.select('input').property('value');
   d3.select('#phrase').text(`Analysis of: ${currentText}`);
-  [...currentText].forEach((char) => {
+  [...currentText].sort().forEach((char) => {
     if (!currentLetters.get(char)) {
       currentLetters.set(char, 1);
     } else {
