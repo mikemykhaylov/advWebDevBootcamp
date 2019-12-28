@@ -1,5 +1,3 @@
-
-
 const birthData = [
   { year: 1967, month: 'January', births: 31502 },
   { year: 1967, month: 'February', births: 26703 },

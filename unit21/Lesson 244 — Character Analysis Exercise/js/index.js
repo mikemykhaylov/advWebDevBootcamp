@@ -1,5 +1,3 @@
-
-
 const currentLetters = new Map();
 
 function updateGraph(stats) {
