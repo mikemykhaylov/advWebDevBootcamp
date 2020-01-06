@@ -579,62 +579,50 @@ const birthData = [
 const months = [
   {
     month: 'December',
-    index: 1,
     quater: 1,
   },
   {
     month: 'January',
-    index: 2,
     quater: 1,
   },
   {
     month: 'February',
-    index: 3,
     quater: 1,
   },
   {
     month: 'March',
-    index: 4,
     quater: 2,
   },
   {
     month: 'April',
-    index: 5,
     quater: 2,
   },
   {
     month: 'May',
-    index: 6,
     quater: 2,
   },
   {
     month: 'June',
-    index: 7,
     quater: 3,
   },
   {
     month: 'July',
-    index: 8,
     quater: 3,
   },
   {
     month: 'August',
-    index: 9,
     quater: 3,
   },
   {
     month: 'September',
-    index: 10,
     quater: 4,
   },
   {
     month: 'October',
-    index: 11,
     quater: 4,
   },
   {
     month: 'November',
-    index: 12,
     quater: 4,
   },
 ];
@@ -676,7 +664,7 @@ function updateMonthGraph(year) {
     .sort((a, b) => {
       const aMonth = months.find((val) => val.month === a.month);
       const bMonth = months.find((val) => val.month === b.month);
-      return aMonth.index < bMonth.index ? -1 : 1;
+      return months.indexOf(aMonth) < months.indexOf(bMonth) ? -1 : 1;
     })(yearData);
   const path = d3
     .arc()
