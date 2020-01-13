@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+* {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--dark-grey: #353b48;
+	--grey: #57606f;
+	--light-grey: #f1f1f1;
+}
+body {
+	background-color: var(--light-grey);
+}
+.controls {
+	align-items: center;
+	background-color: #353b48;
+	box-sizing: border-box;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	height: 150px;
+	justify-content: space-between;
+	padding: 20px 0;
+	width: 100vw;
+}
+.title {
+	font-weight: 700;
+}
+.year,
+.datatype {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+input {
+	margin: 0 10px;
+}
+.background {
+	fill: var(--light-grey);
+	stroke: var(--grey);
+	stroke-width: 1;
+}
+.graphHeader {
+	fill: #2f3542;
+	font: 400 30px "Lato";
+}
+.arc {
+	stroke: var(--light-grey);
+	stroke-width: 0.5;
+}
+.bar {
+	fill: #1dd1a1;
+}
+
+.bar.currentYear {
+	fill: #168d6d;
+}
+
+.tick line {
+  opacity: 0.25;
+}
+.tooltip {
+	background-color: var(--light-grey);
+	border: 4px solid var(--grey);
+	border-radius: 5px;
+	opacity: 0;
+	padding: 15px;
+	pointer-events: none;
+	position: absolute;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.tooltip.show {
+	opacity: 1;
+}
+.tooltip::before {
+	border: 12px solid transparent;
+	border-bottom-color: var(--grey);
+	content: "";
+	left: 50%;
+	margin-left: -6px;
+	position: absolute;
+	top: -25px;
+}
+
+.selected {
+	stroke: var(--dark-grey);
+	stroke-width: 1;
+}
