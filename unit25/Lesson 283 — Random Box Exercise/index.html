@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Random Box Exercise</title>
+</head>
+
+<body>
+  <div class="app"></div>
+
+  <script crossorigin src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+  class Box extends React.Component {
+    render() {
+      const boxStyle = {
+        backgroundColor: '#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0'),
+        width: '500px',
+        color: '#ffffff',
+        height: '300px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }
+      const h2Style = {
+        fontSize: Math.floor(Math.random() * 80 + 10)
+      }
+      return (
+        <div style={boxStyle}>
+          <h2 style={h2Style}>Random Box</h2>
+        </div>
+      )
+    }
+  }
+
+  ReactDOM.render(<Box/>, document.querySelector('.app'));
+  </script>
+</body>
+
+</html>

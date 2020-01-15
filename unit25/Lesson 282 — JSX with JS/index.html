@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>JSX with JS</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script crossorigin src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+  class Pet extends React.Component {
+    render() {
+      const liStyle = {fontSize: '1.5em',}
+      return (
+        <div className='card'>
+          <h2 className='name'>Moxie</h2>
+          <img src='https://github.com/tigarcia/MOxie/raw/master/moxie.png' alt='Moxie, my cat'/>
+          <h5>Hobbies</h5>
+          <ul>
+            <li style={liStyle}>Sleep</li>
+            <li style={liStyle}>Eat</li>
+          </ul>
+        </div>
+      )
+    }
+  }
+
+  ReactDOM.render(<Pet/>, document.querySelector('#app'));
+  </script>
+</body>
+
+</html>
