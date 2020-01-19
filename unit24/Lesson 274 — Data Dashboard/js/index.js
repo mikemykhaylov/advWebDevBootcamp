@@ -385,7 +385,7 @@ function updateBar(activeYear, currentCountry, dataType, dataset) {
     .merge(bars)
     .classed('currentYear', (d) => d.year === activeYear)
     .attr('x', (d, i) => (barWidth + barPadding) * i - (svgWidth / 4 - 2 * svgPadding))
-    .attr('width', (d) => barWidth)
+    .attr('width', () => barWidth)
     .transition()
     .duration(500)
     .ease(d3.easePolyInOut)
