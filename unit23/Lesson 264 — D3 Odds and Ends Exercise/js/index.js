@@ -176,7 +176,7 @@ function updateGraph(year, maxCO2, worldData) {
     .duration(500)
     .ease(d3.easePolyInOut)
     .delay((d, i) => i * 5)
-    .on('start', (d, i, nodes) => {
+    .on('start', (d, i) => {
       if (i === 0) {
         title.text(`Updating to ${year} data...`);
       }
