@@ -14778,7 +14778,9 @@ function updateGraph(year) {
     .attr('x', (d) => xScale(d.x0))
     .attr('y', (d) => yScale(d.length))
     .attr('height', (d) => svgSize - yScale(d.length))
-    .attr('width', (d) => (xScale(d.x1) - xScale(d.x0) - padding >= 0 ? xScale(d.x1) - xScale(d.x0) - padding : 0))
+    .attr('width', (d) =>
+      xScale(d.x1) - xScale(d.x0) - padding >= 0 ? xScale(d.x1) - xScale(d.x0) - padding : 0,
+    )
     .attr('fill', '#00a8ff');
   newBars
     .merge(bars)

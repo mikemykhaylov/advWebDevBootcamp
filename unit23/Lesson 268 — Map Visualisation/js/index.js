@@ -39,7 +39,9 @@ function updateGraph(dataType, worldData) {
     .attr('d', path)
     .merge(countries)
     .transition()
-    .attr('fill', (d) => (dataScale(d.properties[dataType]) ? dataScale(d.properties[dataType]) : '#cccccc'));
+    .attr('fill', (d) =>
+      dataScale(d.properties[dataType]) ? dataScale(d.properties[dataType]) : '#cccccc',
+    );
 }
 
 Promise.all([topoJSONPromise, countryDataPromise]).then(([topoJSON, countriesData]) => {

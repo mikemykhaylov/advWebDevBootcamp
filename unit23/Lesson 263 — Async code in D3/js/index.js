@@ -19,13 +19,15 @@ Promise.all([countriesPromise, citiesPromise]).then(([countries, cities]) => {
     .enter()
     .append('div');
   countrySelection.append('h3').text((d) => d.countryName);
-  countrySelection.append('ul').html((d) => d.cities.reduce((accum, next) => {
-    const percent = (next.population / d.population) * 100;
-    if (Number.isFinite(percent)) {
-      accum += `<li>${next.cityName} — ${percent.toFixed(2)}% population</li>`;
-    } else {
-      accum += `<li>${next.cityName} — Zero population</li>`;
-    }
-    return accum;
-  }, ''));
+  countrySelection.append('ul').html((d) =>
+    d.cities.reduce((accum, next) => {
+      const percent = (next.population / d.population) * 100;
+      if (Number.isFinite(percent)) {
+        accum += `<li>${next.cityName} — ${percent.toFixed(2)}% population</li>`;
+      } else {
+        accum += `<li>${next.cityName} — Zero population</li>`;
+      }
+      return accum;
+    }, ''),
+  );
 });

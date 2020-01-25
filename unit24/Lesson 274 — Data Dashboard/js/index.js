@@ -98,10 +98,10 @@ function showTooltip(data, dataType) {
   <p>Country ID: ${data.countryCode}</p>
   <p>Percent of overall: ${data.percents ? data.percents.toFixed(2) : 0}%</p>
   <p>${
-  dataType === 'co2'
-    ? `Emissions: ${number} kiloTonnes`
-    : `Emissions per capita: ${number} tonnes per capita`
-}
+    dataType === 'co2'
+      ? `Emissions: ${number} kiloTonnes`
+      : `Emissions per capita: ${number} tonnes per capita`
+  }
   </p>`;
   tooltip
     .style('opacity', 1)
@@ -135,9 +135,10 @@ function addContinents(sets, continents) {
   sets.forEach((set) => {
     const updatedSet = set
       .filter(
-        (countryObj) => continents.find(
-          (country) => country.Three_Letter_Country_Code === countryObj.countryCode,
-        ) !== undefined,
+        (countryObj) =>
+          continents.find(
+            (country) => country.Three_Letter_Country_Code === countryObj.countryCode,
+          ) !== undefined,
       )
       .map((countryObj) => ({
         ...countryObj,
@@ -201,8 +202,9 @@ function mergeDatasets(sets) {
 function updateMap(year, dataType, dataset, topoJSON) {
   const yearData = dataset.find((val) => val.year === year).countries;
   yearData.forEach((country) => {
-    country.percents = (100 * country[dataType])
-      / yearData.reduce((accum, next) => {
+    country.percents =
+      (100 * country[dataType]) /
+      yearData.reduce((accum, next) => {
         accum += next[dataType];
         return accum;
       }, 0);
@@ -260,7 +262,9 @@ function updateMap(year, dataType, dataset, topoJSON) {
       updateBar(year, currentCountryGlobal, dataType, dataset);
     })
     .transition()
-    .attr('fill', (d) => (d.properties && d.properties[dataType] ? colorScale(d.properties[dataType]) : '#cccccc'));
+    .attr('fill', (d) =>
+      d.properties && d.properties[dataType] ? colorScale(d.properties[dataType]) : '#cccccc',
+    );
   mapSpace
     .select('.graphHeader')
     .text(`Carbon dioxide emissions ${dataType === 'co2PerCapita' ? 'per capita' : ''} in ${year}`);
@@ -269,8 +273,9 @@ function updateMap(year, dataType, dataset, topoJSON) {
 function updatePie(year, dataType, dataset) {
   const yearData = dataset.find((val) => val.year === year).countries;
   yearData.forEach((country) => {
-    country.percents = (100 * country[dataType])
-      / yearData.reduce((accum, next) => {
+    country.percents =
+      (100 * country[dataType]) /
+      yearData.reduce((accum, next) => {
         accum += next[dataType];
         return accum;
       }, 0);

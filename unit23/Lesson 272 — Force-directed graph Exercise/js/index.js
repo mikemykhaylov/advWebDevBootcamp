@@ -143,7 +143,9 @@ function setUpCheckboxes(committees, nodes, simulation) {
     .property('value', (d) => d)
     .property('checked', true)
     .on('click', () => {
-      const active = committees.filter((val) => d3.select(`input[value="${val}"]`).property('checked'));
+      const active = committees.filter((val) =>
+        d3.select(`input[value="${val}"]`).property('checked'),
+      );
       const newNodes = nodes
         .map((node) => ({
           name: node.name,
