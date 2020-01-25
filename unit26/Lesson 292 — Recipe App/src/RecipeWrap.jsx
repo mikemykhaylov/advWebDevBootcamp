@@ -6,9 +6,7 @@ import './RecipeWrap.css';
 function RecipeWrap({ recipes }) {
   return (
     <div className="recipe-wrap">
-      {recipes.map(({
-        title, ingredients, instructions, img, key,
-      }) => (
+      {recipes.map(({ title, ingredients, instructions, img, key }) => (
         <Recipe
           key={key}
           title={title}

@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Ingredients from './Ingredients';
 import './Recipe.css';
 
-function Recipe({
-  title, img, instructions, ingredients,
-}) {
+function Recipe({ title, img, instructions, ingredients }) {
   return (
     <div className="recipe">
       <img src={img} alt={title} className="recipe__image" />
