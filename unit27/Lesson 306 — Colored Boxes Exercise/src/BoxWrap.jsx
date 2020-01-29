@@ -7,12 +7,12 @@ const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(1
 class BoxWrap extends Component {
   constructor(props) {
     super(props);
-    this.state = { boxes: [] };
-    const { boxes: boxesState } = this.state;
+    const boxesState = [];
     for (let i = 0; i < 40; i += 1) {
       const randomColor = getRandomColor();
       boxesState.push({ key: i, color: randomColor });
     }
+    this.state = {boxes: boxesState}
     setInterval(() => {
       this.setState(({ boxes: prevBoxes }) => {
         const boxIndex = Math.floor(Math.random() * prevBoxes.length);
