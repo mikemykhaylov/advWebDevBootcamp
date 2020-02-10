@@ -1,0 +1,7 @@
+.boxes__wrap {
+  display: grid;
+  gap: 10px 10px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(8, minmax(50px, 1fr));
+  width: 100%;
+}

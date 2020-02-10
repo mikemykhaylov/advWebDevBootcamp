@@ -1,0 +1,39 @@
+.header {
+  background-color: #353b48;
+  margin-bottom: 20px;
+  width: 100vw;
+  &__container {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+  }
+  &__title {
+    color: #ffffff;
+    margin: 0;
+  }
+  &__nav {
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+  }
+  &__menu {
+    color: #ffffff;
+    cursor: pointer;
+    transition-duration: 150ms;
+    &_button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: bold;
+      padding: 0;
+      &:focus {
+        outline: none;
+      }
+    }
+    &:hover {
+      color: #dcdde1;
+    }
+  }
+}
