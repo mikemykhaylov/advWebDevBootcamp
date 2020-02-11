@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import generateColors from "./ColorGenerator";
 import Header from "./Header";
 import BoxesWrap from "./BoxesWrap";
+import Box from './Box';
 
 class MemoryGame extends Component {
   constructor(props) {
@@ -73,7 +74,11 @@ class MemoryGame extends Component {
     return (
       <div className="MemoryGame">
         <Header newGame={this.newGame} />
-        <BoxesWrap colors={this.state.colors} makeChoice={this.makeChoice} />
+        <BoxesWrap>
+          {this.state.colors.map(color => (
+            <Box colorObj={color} makeChoice={this.makeChoice} key={color.key} />
+          ))}
+        </BoxesWrap>
       </div>
     );
   }
