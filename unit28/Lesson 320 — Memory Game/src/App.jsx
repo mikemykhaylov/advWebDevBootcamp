@@ -31,7 +31,7 @@ class MemoryGame extends Component {
       },
       () => {
         if (this.state.choices.length === 2) {
-          setTimeout(this.compareChoices, 250);
+          setTimeout(this.compareChoices, 500);
         }
       }
     );
@@ -58,7 +58,7 @@ class MemoryGame extends Component {
       },
       () => {
         if (this.state.colors.every(val => val.opened === true)) {
-          setTimeout(this.newGame(), 250);
+          setTimeout(this.newGame, 500);
         }
       }
     );

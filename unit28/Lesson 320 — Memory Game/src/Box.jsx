@@ -7,9 +7,13 @@ function Box({ colorObj, makeChoice }) {
   const styles = opened
     ? { backgroundColor: color }
     : { backgroundColor: "#7f7f7f" };
+  let className = 'box'
+  if(opened) {
+    className += ' box_open';
+  }
   return (
     <div
-      className="box"
+      className={className}
       style={styles}
       onClick={() => (opened ? null : makeChoice(key))}
     ></div>
