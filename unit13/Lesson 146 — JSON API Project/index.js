@@ -16,7 +16,6 @@ mongoose.Promise = Promise;
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
-app.use(express.static(`${__dirname}/public`));
 app.use(methodOverride('_method'));
 app.use(express.static(`${__dirname}/views`));
 app.use(express.static(`${__dirname}/public`));
