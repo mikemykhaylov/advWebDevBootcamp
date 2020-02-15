@@ -1,0 +1,16 @@
+.hero {
+  &__image {
+    align-items: center;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/73/Mercator_projection_Square.JPG');
+    background-position: center center;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    width: 100vw;
+  }
+  &__title {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.5);
+  }
+}
