@@ -1,0 +1,17 @@
+@import './variables';
+.form {
+  margin: 50px auto 20px;
+  width: 100%;
+  &__input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid $textcolor;
+    color: $textcolor;
+    font-size: 28px;
+    font-weight: 300;
+    height: 60px;
+    outline: none;
+    padding: 20px 0;
+    width: 100%;
+  }
+}

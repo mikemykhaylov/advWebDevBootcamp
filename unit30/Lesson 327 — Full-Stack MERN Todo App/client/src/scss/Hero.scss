@@ -1,0 +1,19 @@
+@import './variables';
+
+.hero {
+  width: 100%;
+  text-align: center;
+  &__title {
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 80px 0 25px;
+    &_bold {
+      font-weight: 700;
+    }
+  }
+  &__subtitle {
+    font-size: 1.5rem;
+    color: $secondcolor;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,58 @@
+@import './variables';
+.todo {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+  &:hover {
+    background: #00000005;
+    .todo__close-icon path {
+      opacity: 1;
+    }
+  }
+  &__text {
+    align-items: center;
+    background: none;
+    border: none;
+    color: $textcolor;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 100%;
+    margin: 0;
+    overflow-wrap: break-word;
+    text-align: left;
+    white-space: normal;
+    width: 60%;
+    &:focus {
+      outline: none;
+    }
+    &_done {
+      color: $secondcolor;
+      text-decoration: line-through;
+    }
+  }
+  &__close-icon {
+    cursor: pointer;
+    & path {
+      fill: $closeButton;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    &:hover path {
+      fill: saturate($closeButton, 40%);
+    }
+  }
+  &__wrap {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  &__list {
+    width: 100%;
+  }
+}
