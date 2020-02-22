@@ -1,0 +1,17 @@
+.link {
+  text-decoration: none;
+  color: #7f8fa6;
+  margin: 0 10px;
+  &:visited {
+    color: #7f8fa6;
+  }
+  &.link_active {
+    color: #00a8ff;
+    &:visited {
+      color: #00a8ff;
+    }
+  }
+  &__container {
+    padding-top: 20px;
+  }
+}
