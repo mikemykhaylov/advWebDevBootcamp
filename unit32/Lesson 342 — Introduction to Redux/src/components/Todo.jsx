@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Todo = ({ onClick, done, text }) => (
+const Todo = ({ onClick, onButtonClick, done, text }) => (
   <li
     onClick={onClick}
     style={{
@@ -11,10 +11,12 @@ const Todo = ({ onClick, done, text }) => (
     }}
   >
     {text}
+    <button type="button" onClick={onButtonClick}>Delete</button>
   </li>
 );
 Todo.propTypes = {
   onClick: PropTypes.func.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
   done: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired,
 };
