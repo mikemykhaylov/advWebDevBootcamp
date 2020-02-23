@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ReactRouterPropTypes from 'react-router-prop-types';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { addTodo as addTodoAction } from '../actions';
 import '../scss/Form.scss';
 
@@ -19,11 +21,12 @@ class Form extends Component {
   }
 
   handleSubmit(e) {
-    const { newTodoText } = this.state;
-    const { addTodo } = this.props;
     e.preventDefault();
+    const { newTodoText } = this.state;
+    const { addTodo, history } = this.props;
     addTodo(newTodoText);
     this.setState({ newTodoText: '' });
+    history.push('/todos');
   }
 
   render() {
@@ -52,5 +55,6 @@ const mapDispatchToProps = (dispatch) => {
 
 Form.propTypes = {
   addTodo: PropTypes.func.isRequired,
+  history: ReactRouterPropTypes.history.isRequired,
 };
-export default connect(null, mapDispatchToProps)(Form);
+export default connect(null, mapDispatchToProps)(withRouter(Form));
