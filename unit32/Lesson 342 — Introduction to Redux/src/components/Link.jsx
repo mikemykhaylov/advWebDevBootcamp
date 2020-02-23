@@ -1,21 +1,15 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const Link = ({ active, children, onClick }) => {
+  let className = 'filter__button';
   if (active) {
-    return <span>{children}</span>;
+    className += ' filter__button_active';
   }
   return (
-    <a
-      href=""
-      onClick={(e) => {
-        e.preventDefault();
-        onClick();
-      }}
-    >
+    <button type="button" className={className} onClick={onClick}>
       {children}
-    </a>
+    </button>
   );
 };
 Link.propTypes = {

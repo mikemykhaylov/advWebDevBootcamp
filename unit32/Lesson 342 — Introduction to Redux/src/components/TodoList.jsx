@@ -1,12 +1,13 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from './Todo';
+import '../scss/TodoList.scss'
 
 const TodoList = ({ todos, onTodoClick, onButtonClick }) => (
-  <ul>
+  <ul className="todo__list">
     {todos.map((todo) => (
       <Todo
+        className="todo"
         key={todo.id}
         text={todo.text}
         done={todo.done}

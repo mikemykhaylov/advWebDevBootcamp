@@ -1,16 +1,14 @@
 import React from 'react';
 import FilterLink from '../containers/FilterLink';
 import { visibilityFilters } from '../actions';
+import '../scss/Filter.scss'
 
-const Footer = () => (
-  <p>
+const Filter = () => (
+  <div className="filter">
     Show: 
-    {' '}
     <FilterLink filter={visibilityFilters.SHOW_ALL}>All</FilterLink>
-    {', '}
     <FilterLink filter={visibilityFilters.SHOW_ACTIVE}>Active</FilterLink>
-    {', '}
     <FilterLink filter={visibilityFilters.SHOW_DONE}>Completed</FilterLink>
-  </p>
+  </div>
 );
-export default Footer;
+export default Filter;

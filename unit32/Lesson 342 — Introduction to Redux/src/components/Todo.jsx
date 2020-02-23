@@ -3,17 +3,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Todo = ({ onClick, onButtonClick, done, text }) => (
-  <li
-    onClick={onClick}
-    style={{
-      textDecoration: done ? 'line-through' : 'none',
-    }}
-  >
-    {text}
-    <button type="button" onClick={onButtonClick}>Delete</button>
-  </li>
-);
+const Todo = ({ onClick, onButtonClick, done, text }) => {
+  let className = 'todo';
+  if (done) {
+    className += ' todo_done';
+  }
+  return (
+    <li className={className} onClick={onClick}>
+      {text}
+      <button className="todo__delete-button" type="button" onClick={onButtonClick}>
+        Delete
+      </button>
+    </li>
+  );
+};
 Todo.propTypes = {
   onClick: PropTypes.func.isRequired,
   onButtonClick: PropTypes.func.isRequired,
