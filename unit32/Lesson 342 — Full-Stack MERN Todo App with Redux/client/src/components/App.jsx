@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import Filter from './Filter';
-import Form from '../containers/Form';
 import ConnectedTodoList from '../containers/ConnectedTodoList';
+import Form from '../containers/Form';
+import ConnectedTodoWrap from '../containers/ConnectedTodoWrap';
 import '../scss/Hero.scss';
 
 export default function App() {
@@ -17,18 +18,20 @@ export default function App() {
           Add todo
         </NavLink>
       </nav>
-      <Switch>
-        <Route exact path="/todos">
-          <ConnectedTodoList />
-          <Filter />
-        </Route>
-        <Route path="/todos/new">
-          <Form />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/todos" />
-        </Route>
-      </Switch>
+      <ConnectedTodoList>
+        <Switch>
+          <Route exact path="/todos">
+            <ConnectedTodoWrap />
+            <Filter />
+          </Route>
+          <Route path="/todos/new">
+            <Form />
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/todos" />
+          </Route>
+        </Switch>
+      </ConnectedTodoList>
     </div>
   );
 }

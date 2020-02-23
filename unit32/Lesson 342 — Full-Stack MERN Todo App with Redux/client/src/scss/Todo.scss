@@ -1,32 +1,38 @@
 .todo {
-	align-items: center;
-	background-color: white;
-	border-radius: 10px;
-	box-sizing: border-box;
-	cursor: pointer;
-	display: flex;
-	height: 70px;
-	justify-content: space-between;
-	margin-bottom: 20px;
-	padding: 20px;
-	width: 100%;
-	&_done > span {
-		text-decoration: line-through;
-	}
-	&__delete-button {
-		background-color: #F0134D;
-		border: none;
-		border-radius: 25px;
-		color: white;
-		font-weight: 700;
-		height: 50px;
-		min-width: 100px;
-		padding: 15px;
-	}
-	&__list {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		width: 60%;
-	}
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+  &_done > span {
+    text-decoration: line-through;
+  }
+  &__delete-button {
+    background-color: #f0134d;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 700;
+    height: 50px;
+    min-width: 100px;
+    padding: 15px;
+  }
+  &__wrap {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+  }
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }

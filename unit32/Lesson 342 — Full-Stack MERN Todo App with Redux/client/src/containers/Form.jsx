@@ -49,7 +49,7 @@ class Form extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addTodo: (text) => (text.trim() ? dispatch(addTodoAction(text)) : null),
+    addTodo: (name) => (name.trim() ? dispatch(addTodoAction(name)) : null),
   };
 };
 

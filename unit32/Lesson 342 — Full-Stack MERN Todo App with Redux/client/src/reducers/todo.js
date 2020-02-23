@@ -1,48 +1,30 @@
-import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from '../actions';
+import { ADD_TODO, GET_TODOS, TOGGLE_TODO, DELETE_TODO } from '../actions';
 
-const initialState = {
-  todos: [],
-  nextTodoIndex: 0,
-};
-
-export default function todoReducer(state = initialState, action) {
+export default function todoReducer(state = [], action) {
   switch (action.type) {
+    case GET_TODOS: {
+      return [...action.todos];
+    }
+
     case ADD_TODO: {
-      return {
-        ...state,
-        todos: [
-          ...state.todos,
-          {
-            text: action.text,
-            done: false,
-            id: state.nextTodoIndex,
-          },
-        ],
-        nextTodoIndex: state.nextTodoIndex + 1,
-      };
+      return [...state, action.todo];
     }
 
     case TOGGLE_TODO: {
-      const updatedTodos = state.todos.map((todo) => {
-        if (todo.id === action.id) {
+      const updatedTodos = state.map((todo) => {
+        if (todo._id === action.todo._id) {
           return {
             ...todo,
-            done: !todo.done,
+            completed: !todo.completed,
           };
         }
         return todo;
       });
-      return {
-        ...state,
-        todos: updatedTodos,
-      };
+      return updatedTodos;
     }
 
     case DELETE_TODO: {
-      return {
-        ...state,
-        todos: state.todos.filter((val) => val.id !== action.id)
-      }
+      return state.filter((val) => val._id !== action.todo._id);
     }
     default: {
       return state;

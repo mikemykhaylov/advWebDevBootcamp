@@ -1,29 +1,29 @@
 .form {
-	align-items: flex-end;
-	display: flex;
-	justify-content: space-between;
-	width: 60%;
-	&__input {
-		border: none;
-		border-bottom: 2px solid #444444;
-		border-radius: 10px 10px 0 0;
-		box-sizing: border-box;
-		color: #444444;
-		height: 70px;
-		padding: 20px;
-		width: 70%;
-	}
-	&__add-button {
-		-moz-border-radius: 30px;
-		-ms-border-radius: 30px;
-		-o-border-radius: 30px;
-		-webkit-border-radius: 30px;
-		background-color: #61D2DC;
-		border: none;
-		border-radius: 30px;
-		color: white;
-		font-weight: 700;
-		height: 60px;
-		width: 25%;
-	}
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  &__input {
+    border: none;
+    border-bottom: 2px solid #444444;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+    color: #444444;
+    height: 70px;
+    padding: 20px;
+    width: 70%;
+  }
+  &__add-button {
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    background-color: #61d2dc;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    height: 60px;
+    width: 25%;
+  }
 }

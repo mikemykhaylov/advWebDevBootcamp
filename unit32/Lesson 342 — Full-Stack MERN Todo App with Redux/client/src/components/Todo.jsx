@@ -3,24 +3,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Todo = ({ onClick, onButtonClick, done, text }) => {
+const Todo = ({ toggleTodo, deleteTodo, completed, name }) => {
   let className = 'todo';
-  if (done) {
+  if (completed) {
     className += ' todo_done';
   }
   return (
-    <li className={className} onClick={onClick}>
-      <span>{text}</span>
-      <button className="todo__delete-button" type="button" onClick={onButtonClick}>
+    <li className={className} onClick={toggleTodo}>
+      <span>{name}</span>
+      <button className="todo__delete-button" type="button" onClick={deleteTodo}>
         Delete
       </button>
     </li>
   );
 };
 Todo.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  onButtonClick: PropTypes.func.isRequired,
-  done: PropTypes.bool.isRequired,
-  text: PropTypes.string.isRequired,
+  toggleTodo: PropTypes.func.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+  completed: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
 };
 export default Todo;
