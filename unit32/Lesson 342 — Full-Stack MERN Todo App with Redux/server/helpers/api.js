@@ -13,7 +13,7 @@ module.exports = {
   },
   addTodo: (req, res) => {
     Todo.create({ name: req.body.name })
-      .then((todo) => res.send('Successfully created todo!'))
+      .then((todo) => res.json(todo))
       .catch((err) => res.send('Failed to create todo'));
   },
   updateTodo: (req, res) => {
@@ -21,13 +21,13 @@ module.exports = {
       res.send('No data was provided for update');
     } else {
       Todo.findByIdAndUpdate(req.params.todoid, req.body.todo, { runValidators: true })
-        .then((todo) => res.send('Successfully updated todo!'))
+        .then((todo) => res.json(todo))
         .catch((err) => res.send('Failed to update todo'));
     }
   },
   deleteTodo: (req, res) => {
     Todo.findByIdAndDelete(req.params.todoid)
-      .then((todo) => res.send('Successfully deleted todo!'))
+      .then((todo) => res.json(todo))
       .catch((err) => res.send('Failed to delete todo'));
   },
   notFound: (req, res) => {
