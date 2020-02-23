@@ -50,7 +50,6 @@ module.exports = {
     new FaviconsWebpackPlugin('./public/logo.svg')
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
   },
