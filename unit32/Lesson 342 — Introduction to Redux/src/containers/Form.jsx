@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addTodo as addTodoAction } from '../actions';
@@ -9,13 +9,13 @@ class Form extends Component {
     super(props);
     this.state = {
       newTodoText: '',
-    }
+    };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInput(e) {
-    this.setState({ newTodoText: e.target.value});
+    this.setState({ newTodoText: e.target.value });
   }
 
   handleSubmit(e) {
@@ -23,9 +23,9 @@ class Form extends Component {
     const { addTodo } = this.props;
     e.preventDefault();
     addTodo(newTodoText);
-    this.setState({newTodoText: ''})
+    this.setState({ newTodoText: '' });
   }
-  
+
   render() {
     const { newTodoText } = this.state;
     return (
@@ -40,15 +40,14 @@ class Form extends Component {
           Add Todo
         </button>
       </form>
-    )
+    );
   }
 }
 
-
 const mapDispatchToProps = (dispatch) => {
   return {
-    addTodo: (text) => text.trim() ? dispatch(addTodoAction(text)) : null,
-  }
+    addTodo: (text) => (text.trim() ? dispatch(addTodoAction(text)) : null),
+  };
 };
 
 Form.propTypes = {

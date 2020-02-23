@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from './Todo';
-import '../scss/TodoList.scss'
+import '../scss/Todo.scss';
 
 const TodoList = ({ todos, onTodoClick, onButtonClick }) => (
   <ul className="todo__list">

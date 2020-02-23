@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     onButtonClick: (id) => {
       dispatch(deleteTodo(id));
-    }
+    },
   };
 };
 const ConnectedTodoList = connect(mapStateToProps, mapDispatchToProps)(TodoList);
