@@ -10,7 +10,7 @@ const Todo = ({ onClick, onButtonClick, done, text }) => {
   }
   return (
     <li className={className} onClick={onClick}>
-      {text}
+      <span>{text}</span>
       <button className="todo__delete-button" type="button" onClick={onButtonClick}>
         Delete
       </button>

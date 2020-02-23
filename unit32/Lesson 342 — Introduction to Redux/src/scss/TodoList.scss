@@ -10,7 +10,7 @@
 	margin-bottom: 20px;
 	padding: 20px;
 	width: 100%;
-	&_done {
+	&_done > span {
 		text-decoration: line-through;
 	}
 	&__delete-button {
